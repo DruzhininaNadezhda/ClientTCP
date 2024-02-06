@@ -5,14 +5,15 @@ import java.net.Socket;
 import java.util.Scanner;
 
 public class ClientForServer {
-    final String host = "localhost";
-    final int port = 22222;
+    //final String host = "localhost";
+    //final int port = 22222;
     private String message = "";
     public void message() { // для записи из консоли
+        System.out.println("Введите сообщение");
         Scanner in = new Scanner(System.in);
         message = in.nextLine();
     }
-    public void start() {
+    public void start(String host, int port ) {
         while (true) {
             message(); // запись из консоли
             if (!message.equals("")) {
